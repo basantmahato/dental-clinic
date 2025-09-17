@@ -37,7 +37,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="mobile-only-title">Smile Zone Dental Clinic</div> {/* Visible only on mobile */}
+      <div className="mobile-only-title">Dr. Ujjwals Dental Clinic</div> {/* Visible only on mobile */}
 
       <button className="menu-toggle" onClick={toggleMenu} aria-expanded={isOpen} aria-label="Toggle navigation">
         <span className="bar"></span>
