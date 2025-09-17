@@ -57,7 +57,7 @@
 .medical-icon {
   width: 40px;
   height: auto;
-  filter: brightness(0) invert(1); /* Makes the icon white */
+  /* filter: brightness(0) invert(1);  */
   margin-right: 15px;
 }
 

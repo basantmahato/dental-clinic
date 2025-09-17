@@ -13,7 +13,7 @@ const AboutUsSection = () => {
           <div className="doctor-info-overlay">
             <div className="doctor-details">
               {}
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Caduceus.svg/1200px-Caduceus.svg.png" alt="Medical Icon" className="medical-icon" />
+              <img src="caduceus.jpg" alt="Medical Icon" className="medical-icon" />
               <div>
                 <h3>Dr. Ujjwal </h3>
                 <p className="doctor-title">Dental Surgeon (BDS)</p>
