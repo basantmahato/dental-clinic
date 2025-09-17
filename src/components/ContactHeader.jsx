@@ -8,7 +8,7 @@ const ContactHeader = () => {
         <p className="address">Usha Complex, Shiv Path, opposite Domino's, Uliyan, Kadma, Jamshedpur, Jharkhand 831005</p>
         <p className="phone">
           Call Us Today{' '}
-          <span className="phone-number">09308510513</span>
+          <span className="phone-number">0930*****13</span>
         </p>
       </div>
     </div>

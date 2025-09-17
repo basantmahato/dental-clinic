@@ -2,7 +2,7 @@ import React from 'react';
 import './WhatsAppIcon.css';
 
 const WhatsAppIcon = () => {
-  const phoneNumber = "8210377825"; // Replace with your WhatsApp number, in international format without any '+' or '00'
+  const phoneNumber = ""; 
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

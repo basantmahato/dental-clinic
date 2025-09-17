@@ -1,9 +1,9 @@
 import React from 'react';
-import './ContactUs.css'; // Make sure to create this CSS file
-import { FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'; // Make sure to install react-icons
+import './ContactUs.css'; 
+import { FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'; 
 
 const ContactUs = () => {
-  const phoneNumber = "+91 97893 97684"; // Your clinic's phone number
+  const phoneNumber = "0930*****13"; 
   const address = "Dr Ujjwals Dental Care, Usha Complex, Shiv Path, opposite Dominos, Uliyan, Kadma, Jamshedpur, Jharkhand 831005";
 
   return (

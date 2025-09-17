@@ -7,7 +7,7 @@ const testimonialsData = [
     id: 1,
     name: 'Neha Singh',
     date: '2025-07-08',
-    avatar: './pf2.jpeg', // Replace with your actual avatar paths
+    avatar: './pf2.jpeg', 
     review: 'I usually stay in Delhi but was visiting Jamshedpur for some work when I started having tooth pain. I searched online for the best dental clinic and found Smile Zone Dental Clinic. Dr. Kumari Anjali is an amazing doctor. She understood my problem and explained the treatment procedure in detail. She is very professional and the clinic is very clean and hygienic. I highly recommend her to everyone.',
     rating: 5,
   },

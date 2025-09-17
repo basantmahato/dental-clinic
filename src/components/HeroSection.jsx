@@ -1,8 +1,8 @@
 import React from 'react';
-import './HeroSection.css'; // Make sure to create this CSS file
+import './HeroSection.css'; 
 
 const HeroSection = () => {
-  const whatsappNumber = "9308510513"; // Replace with your WhatsApp number
+  const whatsappNumber = ""; 
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
           rel="noopener noreferrer" 
           className="book-now-button"
         >
-          Book Now <span className="phone-icon">📞</span> {/* Unicode phone icon */}
+          Book Now <span className="phone-icon">📞</span> {}
         </a>
       </div>
     </div>

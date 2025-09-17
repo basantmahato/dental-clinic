@@ -4,7 +4,7 @@ import './Services.css';
 // Service data
 const servicesData = [
   {
-    image: './cr1.webp', // Replace with your actual image paths
+    image: './cr1.webp', 
     title: 'Root Canal Treatment',
     description: 'Teeth that might normally have to be pulled can be saved by root canal therapy. It entails extracting pus and injured or dead nerve tissues from the diseased teeth\'s root canals. The root canal is prepped so that it can be sealed with a filling by removing any diseased or dead tissue and cleaning and disinfecting the remaining canal area.',
   },
@@ -20,17 +20,17 @@ const servicesData = [
   },
 
   {
-    image: './cr1.webp', // Replace with your actual image paths
+    image: './cr4.avif', 
     title: 'Root Canal Treatment',
     description: 'Teeth that might normally have to be pulled can be saved by root canal therapy. It entails extracting pus and injured or dead nerve tissues from the diseased teeth\'s root canals. The root canal is prepped so that it can be sealed with a filling by removing any diseased or dead tissue and cleaning and disinfecting the remaining canal area.',
   },
   {
-    image: './cr2.avif',
+    image: './cr5.avif',
     title: 'Dental Implants',
     description: 'An oral implantologist inserts a dental implant, which is a synthetic tooth root, into your jaw to support a bridge or replacement tooth. For those in good overall oral health who have lost a tooth or teeth as a result of an accident or for any other cause, dental implants are a great alternative.',
   },
   {
-    image: './cr3.avif',
+    image: './cr6.avif',
     title: 'Invisible/ Traditional Braces Treatment',
     description: 'Orthodontic tools including as metal braces, ceramic (tooth-colored) braces, lingual braces, and clear path (invisalign or invisible braces) are used to rectify common issues.',
   },

@@ -1,11 +1,9 @@
 import React from 'react';
 import './AboutClinic.css';
 
-// You would typically import images like this:
-// import doctorWorkingImage from './path/to/doctor-working.jpg';
 
 const AboutClinic = () => {
-  const clinicImage = './cr2.avif'; // Placeholder image
+  const clinicImage = './cr2.avif'; 
 
   return (
     <div className="about-clinic-section">

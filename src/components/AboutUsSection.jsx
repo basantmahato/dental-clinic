@@ -1,20 +1,18 @@
 import React from 'react';
-import './AboutUsSection.css'; // Make sure to create this CSS file
+import './AboutUsSection.css'; 
 
-// Placeholder image for the doctor.
-// In a real project, you would import it like:
-// import doctorImage from './path/to/dr-anjali.jpg';
-const doctorImage = './profile.png'; // Replace with the actual image path
+
+const doctorImage = './profile.png'; 
 
 const AboutUsSection = () => {
   return (
     <div className="about-us-section">
       <div className="doctor-card-container">
         <div className="doctor-card">
-          <img src={doctorImage} alt="Dr. Kumari Anjali" className="doctor-image" />
+          <img src={doctorImage} alt="" className="doctor-image" />
           <div className="doctor-info-overlay">
             <div className="doctor-details">
-              {/* Assuming you have a medical caduceus icon or similar */}
+              {}
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Caduceus.svg/1200px-Caduceus.svg.png" alt="Medical Icon" className="medical-icon" />
               <div>
                 <h3>Dr. Ujjwal </h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Don't forget to create this CSS file
+import './Footer.css'; 
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="contact-info">
           <p className="call-today-label">Call Today</p>
-          <p className="phone-number">09308510513</p>
+          <p className="phone-number">0930*****13</p>
         </div>
 
         <div className="location-info">
