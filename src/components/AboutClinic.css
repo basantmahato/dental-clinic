@@ -1,0 +1,157 @@
+/* AboutClinic.css */
+
+.about-clinic-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top */
+  padding: 80px 5%;
+  background-color: #fff;
+  gap: 60px; /* Space between text and image sections */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Text Content */
+.clinic-text-content {
+  flex: 1; /* Takes up available space */
+  max-width: 50%; /* Limit width on larger screens */
+  text-align: left;
+}
+
+.clinic-name-title {
+  font-size: 2.2em;
+  color: #007bff; /* Blue color from your design */
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.clinic-text-content p {
+  font-size: 1.05em;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.clinic-text-content p strong {
+  font-weight: bold;
+  color: #1e3d59; /* Darker blue for emphasis */
+}
+
+/* Right Image Gallery */
+.clinic-image-gallery {
+  flex-shrink: 0; /* Prevent gallery from shrinking */
+  width: 50%; /* Take up half the width on desktop */
+  max-width: 550px; /* Max width for consistency */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-main-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 aspect ratio, adjust as needed for your image */
+  height: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0; /* Fallback background */
+}
+
+.gallery-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the space */
+  display: block;
+}
+
+.gallery-dots {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff; /* Active dot color */
+}
+
+/* Optional: Carousel arrows if you uncomment them in JSX */
+/* .gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+.gallery-arrow.left-arrow { left: 10px; }
+.gallery-arrow.right-arrow { right: 10px; } */
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .about-clinic-section {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 40px;
+    padding: 60px 5%;
+  }
+
+  .clinic-text-content,
+  .clinic-image-gallery {
+    width: 100%; /* Take full width */
+    max-width: 700px; /* Limit overall width */
+  }
+
+  .clinic-text-content {
+    text-align: center; /* Center text content */
+  }
+
+  .clinic-name-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-clinic-section {
+    padding: 40px 4%;
+  }
+
+  .clinic-name-title {
+    font-size: 1.8em;
+  }
+
+  .clinic-text-content p {
+    font-size: 0.95em;
+  }
+
+  .gallery-main-image-container {
+    padding-bottom: 65%; /* Adjust aspect ratio for better mobile viewing */
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-clinic-section {
+    padding: 30px 3%;
+  }
+  .clinic-name-title {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,46 @@
+/* ContactHeader.css */
+
+.contact-header {
+  background-color: #a3e66a; /* A light, greenish color */
+  padding: 10px 20px;
+  color: #1e3d59; /* A dark, bluish color for the text */
+  font-family: Arial, sans-serif;
+  display: none; /* Hidden by default on mobile */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.address,
+.phone {
+  margin: 0;
+  font-size: 14px;
+}
+
+.phone {
+  font-weight: bold;
+}
+
+.phone-number {
+  font-size: 16px;
+}
+
+/* Media query for larger screens (tablets and desktops) */
+@media (min-width: 768px) {
+  .contact-header {
+    display: flex; /* Visible on screens larger than 767px */
+  }
+
+  .address {
+    flex-grow: 1; /* Allows the address to take up available space */
+  }
+
+  .phone {
+    text-align: right;
+  }
+}

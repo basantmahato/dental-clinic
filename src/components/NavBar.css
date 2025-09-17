@@ -1,0 +1,212 @@
+/* NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Navbar Brand (Logo and Clinic Text) */
+.navbar-brand {
+  display: flex;
+  align-items: flex-start; /* Align logo and text at the top */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.logo-icon {
+  margin-right: 8px;
+  /* Basic styling for the SVG placeholder */
+}
+
+.clinic-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically with logo */
+}
+
+.clinic-name {
+  font-size: 1.2em; /* Adjust as needed */
+  font-weight: bold;
+  color: #1e3d59; /* Dark blue from your image */
+  margin: 0;
+  line-height: 1; /* Tighter line height */
+}
+
+.dental-clinic-tag {
+  font-size: 0.8em; /* Smaller for the tagline */
+  color: #6c757d; /* Lighter grey */
+  margin: 0;
+  line-height: 1; /* Tighter line height */
+}
+
+.doctor-info {
+  background-color: #2196F3; /* Blue from your image */
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 4px; /* Slightly rounded corners */
+  margin-left: 10px; /* Space between clinic text and doctor name */
+  white-space: nowrap; /* Prevent breaking on smaller screens for this element */
+  align-self: flex-end; /* Align to the bottom of the brand section */
+}
+
+/* Mobile Specific Title - Hidden on Desktop */
+.mobile-only-title {
+  display: none; /* Hidden by default */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1e3d59;
+  flex-grow: 1; /* Allows it to take up space between logo and toggle */
+  margin-left: 15px; /* Space from logo */
+}
+
+
+/* Navigation Links (Desktop) */
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal on desktop */
+}
+
+.navbar-links li {
+  margin-left: 30px; /* Space between links */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #1e3d59; /* Dark blue for links */
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: #2196F3; /* Blue on hover/active */
+}
+
+/* Mobile Toggle Button (Hamburger) */
+.menu-toggle {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10; /* Ensure it's above other content if menu slides */
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #1e3d59; /* Dark blue for bars */
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Mobile Styles (Media Query) --- */
+@media (max-width: 992px) { /* Adjust breakpoint as needed for your design */
+  .navbar {
+    flex-wrap: nowrap; /* Prevent wrapping on mobile, keep logo/toggle on one line */
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    align-items: center; /* Center logo and text vertically on mobile */
+  }
+
+  .logo-container {
+    margin-right: 0; /* No extra margin on mobile */
+  }
+
+  .clinic-text {
+    display: none; /* Hide 'SMILE ZONE DENTAL CLINIC' text on mobile */
+  }
+
+  .doctor-info {
+    display: none; /* Hide 'Dr. Kumari Anjali' on mobile */
+  }
+
+  .mobile-only-title {
+    display: block; /* Show the simpler clinic name on mobile */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Hide navigation links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #fff; /* White background for dropdown menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    padding: 10px 0;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show links when menu is open */
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li {
+    margin: 10px 0; /* Vertical spacing for mobile links */
+  }
+
+  .navbar-links a {
+    padding: 10px 0;
+    display: block; /* Make links full width for easier tapping */
+    border-bottom: 1px solid #eee; /* Separator for menu items */
+  }
+
+  .navbar-links li:last-child a {
+    border-bottom: none; /* No border for the last item */
+  }
+
+  /* Hamburger Icon Animation for 'X' */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+/* Adjustments for even smaller screens if needed */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  .clinic-name, .mobile-only-title {
+    font-size: 1.1em;
+  }
+}

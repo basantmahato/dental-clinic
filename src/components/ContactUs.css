@@ -1,0 +1,172 @@
+/* ContactUs.css */
+
+.contact-us-section {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light background for the overall section */
+}
+
+.contact-header-banner {
+  background-color: #a7e6e6; /* Light bluish-green from the image */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-main-title {
+  font-size: 3em;
+  color: #1e3d59; /* Dark blue color */
+  margin: 0;
+}
+
+.contact-content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between form and info */
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Form Section (Left Column) */
+.contact-form-container {
+  flex: 1; /* Takes up available space */
+  max-width: 500px; /* Limit form width */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px;
+}
+
+/* Contact Info Details Section (Right Column) */
+.contact-info-details {
+  flex: 1; /* Takes up available space */
+  max-width: 500px; /* Limit info width */
+  text-align: left;
+  padding-top: 20px; /* Align with form inputs a bit */
+}
+
+.info-query-title {
+  font-size: 2em;
+  color: #007bff; /* Blue color from the image */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-description {
+  font-size: 1em;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.info-icon {
+  font-size: 1.5em;
+  color: #007bff; /* Blue for icons */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  margin-top: 3px; /* Adjust vertical alignment for icon */
+}
+
+.info-text {
+  font-size: 1.05em;
+  color: #343a40;
+  line-height: 1.5;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .contact-content-wrapper {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 40px;
+    padding: 40px 5%;
+  }
+
+  .contact-form-container,
+  .contact-info-details {
+    max-width: 600px; /* Allow wider on tablets */
+    width: 100%;
+    padding: 0;
+  }
+
+  .info-query-title {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  .info-description {
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center; /* Center icons and text */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-main-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header-banner {
+    padding: 40px 15px;
+  }
+  .contact-main-title {
+    font-size: 2em;
+  }
+  .contact-content-wrapper {
+    padding: 30px 15px;
+  }
+  .form-group label, .form-group input, .form-group textarea, .info-text {
+    font-size: 0.95em;
+  }
+  .info-query-title {
+    font-size: 1.5em;
+  }
+}

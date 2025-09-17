@@ -1,0 +1,110 @@
+/* Services.css */
+
+.services-section {
+  padding: 60px 20px;
+  background-color: #e0f4f4; /* Light bluish-green background from the image */
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2em;
+  color: #1e3d59;
+  margin-bottom: 40px;
+}
+
+.services-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  gap: 30px; /* Space between the cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
+  flex-basis: calc(33.333% - 20px); /* Distribute cards evenly with gap */
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover animation effect */
+.service-card:hover {
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 200px; /* Fixed height for consistent image size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the space without distortion */
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.2em;
+  color: #1e3d59;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 0.95em;
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .service-card {
+    flex-basis: calc(50% - 15px); /* Show two cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-card-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-section {
+    padding: 40px 10px;
+  }
+  
+  .services-title {
+    font-size: 1.8em;
+  }
+
+  .service-card {
+    flex-basis: 100%; /* Full width on mobile */
+    max-width: 400px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+}

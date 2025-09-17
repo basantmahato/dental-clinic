@@ -1,0 +1,228 @@
+/* AboutUsSection.css */
+
+.about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+  gap: 60px; /* Space between the image card and text content */
+}
+
+/* Doctor Card Container (Left Section) */
+.doctor-card-container {
+  flex-shrink: 0; /* Prevent the card from shrinking */
+  width: 50%; /* Take up half the width on desktop */
+  max-width: 550px; /* Max width for consistency */
+  perspective: 1000px; /* For 3D transform effect */
+}
+
+.doctor-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover effect on the doctor card */
+.doctor-card:hover {
+  transform: translateY(-10px) rotateX(2deg); /* Lift and slight tilt */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.doctor-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.doctor-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(30, 61, 89, 0.95), rgba(30, 61, 89, 0.7)); /* Dark blue gradient */
+  color: white;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.doctor-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.medical-icon {
+  width: 40px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Makes the icon white */
+  margin-right: 15px;
+}
+
+.doctor-info-overlay h3 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.doctor-title,
+.clinic-name,
+.care-message {
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.clinic-name {
+  font-weight: 500;
+}
+
+.care-message {
+  font-size: 0.85em;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+
+/* About Content (Right Section) */
+.about-content {
+  flex: 1; /* Takes up remaining space */
+  max-width: 50%; /* Limit width on larger screens */
+  text-align: left;
+}
+
+.about-tagline {
+  font-size: 1.1em;
+  color: #6c757d; /* Grey color */
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.about-headline {
+  font-size: 2.5em;
+  color: #1e3d59; /* Dark blue */
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.about-description {
+  font-size: 1.1em;
+  color: #495057; /* Slightly darker grey */
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.read-more-button {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .about-us-section {
+    flex-direction: column; /* Stack content vertically */
+    padding: 60px 5%;
+    gap: 40px;
+    text-align: center; /* Center text content */
+  }
+
+  .doctor-card-container,
+  .about-content {
+    width: 90%; /* Take more width on smaller screens */
+    max-width: 600px; /* Limit overall width */
+  }
+
+  .about-content {
+    text-align: center; /* Center text */
+  }
+
+  .about-headline {
+    font-size: 2em;
+  }
+
+  .about-description {
+    font-size: 1em;
+  }
+
+  .read-more-button {
+    margin-top: 20px; /* Add space above button if text is centered */
+  }
+
+  /* Remove hover effect on touch devices if desired (optional) */
+  @media (hover: none) {
+    .doctor-card:hover {
+      transform: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Keep original shadow */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 40px 4%;
+  }
+
+  .doctor-card-container,
+  .about-content {
+    width: 100%;
+    max-width: 500px; /* Further limit width on smaller screens */
+  }
+
+  .about-headline {
+    font-size: 1.8em;
+  }
+
+  .doctor-info-overlay {
+    padding: 15px 20px;
+  }
+
+  .doctor-info-overlay h3 {
+    font-size: 1.3em;
+  }
+
+  .doctor-title,
+  .clinic-name,
+  .care-message {
+    font-size: 0.8em;
+  }
+
+  .medical-icon {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .read-more-button {
+    padding: 12px 25px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-section {
+    padding: 30px 3%;
+  }
+
+  .about-headline {
+    font-size: 1.6em;
+  }
+
+  .doctor-card {
+    border-radius: 10px;
+  }
+}
