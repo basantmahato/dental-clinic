@@ -13,7 +13,7 @@ import Services from './components/Services'
 import TestimonialsGrid from './components/TestimonialsGrid'
 import ContactUs from './components/ContactUs'
 import AboutClinic from './components/AboutClinic'
-import WhatsAppIcon from './components/WhatsappIcon'
+import WhatsAppIcon from './components/WhatsAppIcon'
 
 
 function App() {
